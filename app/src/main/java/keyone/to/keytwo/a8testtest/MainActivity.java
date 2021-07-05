@@ -17,23 +17,24 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-
-import keyone.to.keytwo.a8testtest.databinding.ActivityMainBinding;
 import keyone.to.keytwo.a8testtest.ui.SocialNetworkFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainBinding binding;
+
+
+    public static MainActivity _activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
         initToolbar();
         addFragment(SocialNetworkFragment.newInstance());
+
+        _activity = this;
     }
 
     private void initToolbar() {

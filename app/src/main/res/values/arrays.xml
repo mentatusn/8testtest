@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="titles">
-        <item>Один</item>
-        <item>Два</item>
-        <item>Три</item>
+        <item>Красивая картинка 1</item>
+        <item>Красивая картинка 2</item>
+        <item>Красивая картинка 3</item>
+        <item>Красивая картинка 4</item>
+        <item>Красивая картинка 5</item>
+        <item>Красивая картинка 6</item>
+        <item>Красивая картинка 7</item>
+    </string-array>
+    <string-array name="desriptions">
+        <item>Описание красивой картинки 1</item>
+        <item>Описание красивой картинки 2</item>
+        <item>Описание красивой картинки 3</item>
+        <item>Описание красивой картинки 4</item>
+        <item>Описание красивой картинки 5</item>
+        <item>Описание красивой картинки 6</item>
+        <item>Описание красивой картинки 7</item>
+    </string-array>
+    <string-array name="images">
+        <item>@drawable/nature1</item>
+        <item>@drawable/nature2</item>
+        <item>@drawable/nature3</item>
+        <item>@drawable/nature4</item>
+        <item>@drawable/nature5</item>
+        <item>@drawable/nature6</item>
+        <item>@drawable/nature7</item>
     </string-array>
 </resources>

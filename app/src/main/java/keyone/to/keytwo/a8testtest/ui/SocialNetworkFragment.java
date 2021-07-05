@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import keyone.to.keytwo.a8testtest.R;
+import keyone.to.keytwo.a8testtest.data.CardSource;
+import keyone.to.keytwo.a8testtest.data.CardSourceImpl;
 
 public class SocialNetworkFragment extends Fragment {
 
@@ -31,16 +33,16 @@ public class SocialNetworkFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_social_network, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycleView);
-        String[] allData = getResources().getStringArray(R.array.titles);
+        //String[] allData = getResources().getStringArray(R.array.titles);
+        CardSource cardSource = new CardSourceImpl(getResources()).init();
         recyclerView.setHasFixedSize(true);
         /*LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);*/
-        Log.d("mylogs",allData.length+" le");
-        SocialNetworkAdapter socialNetworkAdapter = new SocialNetworkAdapter(allData);
+        SocialNetworkAdapter socialNetworkAdapter = new SocialNetworkAdapter(cardSource);
         socialNetworkAdapter.setOnMyClickListener(new OnMyClickListener() {
             @Override
             public void onMyClick(View view, int position) {
-                Toast.makeText(container.getContext(),"Получилось "+((TextView) view).getText()+" "+position,Toast.LENGTH_SHORT).show();
+                Toast.makeText(container.getContext(),"Получилось "+" "+position,Toast.LENGTH_SHORT).show();
             }
         });
         recyclerView.setAdapter(socialNetworkAdapter);
