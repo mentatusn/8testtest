@@ -56,7 +56,7 @@ public class SocialNetworkAdapter extends RecyclerView.Adapter<SocialNetworkAdap
 
     @Override
     public int getItemCount() {
-        return 100000000;
+        return dataSource.size();
     }
 
 

@@ -57,12 +57,6 @@ public class CardSourceImpl implements CardSource {
 
     @Override
     public CardData getGardData(int position) {
-        Log.d("mylogs","position"+position);
-
-        if(position>=dataSource.size()){
-            position = position%7;
-        }
-        Log.d("mylogs","position"+position);
         return dataSource.get(position);
     }
 }
